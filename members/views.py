@@ -26,6 +26,8 @@ class UserLoginView(View):
             user = form.get_user()
             login(request, user)
             return redirect("home")
+        else:
+            return redirect("login")
 
     def get(self, request):
         form = LoginForm()
